@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <meta property="og:url" content="http://nakulsaxena.in/suspendedverses/"/>
+        <meta property="og:title" content="Suspended Verses :: Text Visualization, Data Art"/>
+        <meta property="og:image" content="http://www.nakulsaxena.in/suspendedverses/thumb.jpg"/>
+        <meta property="og:description" content="Beautiful Visualizations Created From Text :: Nakul Saxena, User Experience Designer, Bangalore, India"/>
+        <meta name="description" content="Beautiful Visualizations Created From Text :: Nakul Saxena, User Experience Designer, Bangalore, India"/>
+        
+        <title>Suspended Verses :: Data Art</title>
+        <link rel="shortcut icon" type="image/png" href="../../../images/favicon.png"/>
+        <link rel="stylesheet" href="css/all.css" type="text/css" />
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-64669015-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <a href="../../../">
+                <img id="logo" src="../../../images/logo.svg" alt="Nakul Saxena Home"/>
+            </a>
+            <a href="index.html">
+                <span class="pageTitle">Suspended Verses</span>
+            </a>
+            
+        </div>
+        <div id="enterInfo">
+            <div id="selectMode">
+                <div class="mode selected">Select From List</div>
+                <div class="mode">Create Your Own</div>   
+            </div>
+            
+            <div class="chooseFrom">
+                <ul id="poemList">
+                    <li>
+                        <span class="poemListTitle">Trees</span><br/>
+                        <span class="poemListAuth">Joyce Kilmer</span>
+                    </li>
+                    <li>
+                        <span class="poemListTitle">A Dream Within A Dream</span><br/>
+                        <span class="poemListAuth">Edgar Allan Poe</span>
+                    </li>
+                    <li>
+                        <span class="poemListTitle">The Road Not Taken</span><br/>
+                        <span class="poemListAuth">Robert Frost</span>
+                    </li>
+                    <li>
+                        <span class="poemListTitle">She Walks In Beauty</span><br/>
+                        <span class="poemListAuth">Lord Byron</span>
+                    </li>
+                    <li>
+                        <span class="poemListTitle">Last Lines</span><br/>
+                        <span class="poemListAuth">Emily Brontë</span>
+                    </li>
+                    <li>
+                        <span class="poemListTitle">I Died For Beauty - But Was Scarce</span><br/>
+                        <span class="poemListAuth">Emily Dickinson</span>
+                    </li>
+                    <li>
+                        <span class="poemListTitle">Leisure</span><br/>
+                        <span class="poemListAuth">William Henry Davies</span>
+                    </li>
+                    <li>
+                        <span class="poemListTitle">Let Me Not Forget</span><br/>
+                        <span class="poemListAuth">Rabindranath Tagore</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="chooseFrom" style="display:none">
+                <label class="intro">Create Visualizations from your prose and poetry! Don't make 'em too long though.</label>
+                <br/><br/><br/>
+                <label class="desclabel">Composition Title</label>
+                <br/>
+                <textarea class="poemInfo" id="poemTitle" style="height:25px;line-height:25px"></textarea>
+                <br>
+                <label class="desclabel">Content</label>
+                <br/>
+                <textarea class="poemInfo" id="poemText" style="height:200px;"></textarea>
+                <br>
+                <label class="desclabel">Author</label>
+                <br/>
+                <textarea class="poemInfo" id="poemAuth" style="height:25px;line-height:25px"></textarea>
+                <br>
+                <div class="myButton" id="generateThis">
+                    Generate!
+                </div>
+            </div>
+            
+                
+        </div>
+        
+        <div id="result">
+            
+            <canvas id="myCanvas" width="100" height="100"></canvas>
+            <div id="poemDisp">
+                <div id="title"> Leisure</div>
+                <div id="author">William Henry Davies</div>
+                <div id="entirePoem"></div>
+                <div id="selectCol">
+                    Select visualization color<br/><br/>
+                    <ul id="colors">
+                        <li style="background-image:url('colBg.jpg');background-color:#000"></li>
+                        <li style="background-color:#54C7FC"></li>
+                        <li style="background-color:#FFCD00"></li>
+                        <li style="background-color:#FF9600"></li>
+                        <li style="background-color:#FF2851"></li>
+                        <li style="background-color:#0076FF"></li>
+                        <li style="background-color:#44DB5E"></li>
+                        <li style="background-color:#FF3824"></li>
+                        <li style="background-color:#999999"></li>
+                    </ul>
+                </div>
+                <div id="createAnother" class="myButton">
+                    Create Another
+                </div>
+            </div>
+            
+        </div>
+        
+        <div id="overlay"></div>
+        
+    </body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <script type="text/javascript" src="js/poems.js"></script>
+    <script type="text/javascript" src="js/all.js"></script>
+</html>
